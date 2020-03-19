@@ -1,11 +1,22 @@
 plugins {
     id 'java'
+    id 'application'
 }
+
+application {
+    mainClassName = 'IPCounter.IpCounter'
+    applicationDefaultJvmArgs = ['-Xmx4608m']
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+}
+
 
 group 'org.avisfy'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
+
 
 repositories {
     mavenCentral()
@@ -14,3 +25,4 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
+
